@@ -45,9 +45,10 @@ st.title("Apartment Price Prediction In Melbourne")
 
 # Sidebar with user input
 st.sidebar.header("User Input")
-building_area = st.sidebar.slider("Building Area [m2]", X["BuildingArea"].min(), X["BuildingArea"].max(), X["BuildingArea"].mean())
-latitude = st.sidebar.slider("Latitude", X["Lattitude"].min(), X["Lattitude"].max(), X["Lattitude"].mean())
-longitude = st.sidebar.slider("Longitude", X["Longtitude"].min(), X["Longtitude"].max(), X["Longtitude"].mean())
+building_area = st.sidebar.slider("Building Area [m2]", float(X["BuildingArea"].min()), float(X["BuildingArea"].max()), float(X["BuildingArea"].mean()))
+latitude = st.sidebar.slider("Latitude", float(X["Lattitude"].min()), float(X["Lattitude"].max()), float(X["Lattitude"].mean()))
+longitude = st.sidebar.slider("Longitude", float(X["Longtitude"].min()), float(X["Longtitude"].max()), float(X["Longtitude"].mean()))
+
 
 # Button to trigger prediction
 if st.sidebar.button("Predict"):
